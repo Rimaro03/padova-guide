@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name" translatable="false">Padova Guide</string>
+    <!-- Screen names -->
+    <string name="home" translatable="false">Home</string>
+    <string name="recommendation" translatable="false">Recommendations</string>
+    <string name="detail" translatable="false">Recommendation details</string>
+
+    <!-- Categories -->
+    <string name="coffee" translatable="false">Coffee shops</string>
+    <string name="restaurants" translatable="false">Restaurants</string>
+    <string name="kidplaces" translatable="false">Kid-friendly Places</string>
+    <string name="parks" translatable="false">Parks</string>
+    
+    <!-- Coffe shops recommentadions -->
+    <string name="coffee_1_name" translatable="false">Caffeine</string>
+    <string name="coffee_1_location" translatable="false">Via Roma 96</string>
+    <string name="coffee_1_description">great place for aperitifs and coffee with friends. the food is good, but not excellent. the drinks are plentiful, the snacks are not. to be in the center you pay regularly.</string>
+
+    <string name="coffee_2_name" translatable="false">Caffè V</string>
+    <string name="coffee_2_location" translatable="false">Via Roma 68</string>
+    <string name="coffee_2_description">Explore the enchantment of Caffè V in Padua, savor the welcoming atmosphere, the delicious flavors and the surprises that this unique place has to offer.</string>
+
+    <string name="coffee_3_name" translatable="false">Caffè Pedrocchi</string>
+    <string name="coffee_3_location" translatable="false">Via VIII Febbraio 15</string>
+    <string name="coffee_3_description">Caffè Pedrocchi is the oldest and most famous historic café in the city of Padua. A place chosen for tasting coffee and cuisine, recognized as the most exclusive location in the center where the most important and spectacular events are held..</string>
+
+    <!-- Restaurants recommentadions -->
+    <string name="restaurant_1_name">Porta Portello Portami Via</string>
+    <string name="restaurant_1_location">Via Giambattista Belzoni 182</string>
+    <string name="restaurant_1_description">New place in the center of Padua to taste delicious panzerotti with the most varied fillings for lunch or dinner or for a simple snack!</string>
+
+    <string name="restaurant_2_name">Otium</string>
+    <string name="restaurant_2_location">Via Roma 69</string>
+    <string name="restaurant_2_description">Otivm Padova is a welcoming and well-known place that offers refreshments, aperitifs, dishes of the week and desserts by the glass.</string>
+
+    <string name="restaurant_3_name">Vinet</string>
+    <string name="restaurant_3_location">Via Delle Piazze 1</string>
+    <string name="restaurant_3_description">We select excellent wines and foods for those looking for food and wine experiences to live and taste.</string>
+
+    <!-- Kids places recommentadions -->
+    <string name="kidplace_1_name">Palazzo Bo</string>
+    <string name="kidplace_1_location">Via VIII Febbraio 2</string>
+    <string name="kidplace_1_description">Palazzo del Bo (commonly known as Il Bò) has been the historic seat of the University of Padua since 1493. It is still the seat of the rectorate and the School of Law, as well as the oldest anatomical theatre in the world.</string>
+
+    <string name="kidplace_2_name">Engineering school of UniPD</string>
+    <string name="kidplace_2_location">Lungargine del Piovego 1</string>
+    <string name="kidplace_2_description">The School of Engineering coordinates 34 Degree Courses (Bachelor\'s, Master\'s and single-cycle) and the teaching activities of over 14,000 students.</string>
+
+    <string name="kidplace_3_name">Library Beato Pellegrino</string>
+    <string name="kidplace_3_location">Via Beato Pellegrino 28</string>
+    <string name="kidplace_3_description">The Beato Pellegrino Complex was inaugurated on September 30, 2019 and it includes the most beautiful library of the University of Padua.</string>
+
+    <!-- Parks recommentadions -->
+    <string name="park_1_name">Piazza delle Erbe</string>
+    <string name="park_1_location">Padua</string>
+    <string name="park_1_description">Piazza delle Erbe, once also called Piazza delle Biade or Piazza del Vino but also Piazza della Giustizia, is one of the many squares that characterize the historic center of Padua. For centuries, it was, together with Piazza della Frutta, the commercial center of the city.</string>
+
+    <string name="park_2_name">Piazza dei Signori</string>
+    <string name="park_2_location">Padua</string>
+    <string name="park_2_description">Piazza dei Signori or Piazza della Signoria is one of the many squares that characterize the historic center of the city of Padua. For centuries it was the scene of civic celebrations, tournaments and a space for the city\'s representation compared to the larger Piazza delle Erbe and Piazza della Frutta which had greater commercial propensities.</string>
+
+    <string name="park_3_name">Prato della Valle</string>
+    <string name="park_3_location">Padua</string>
+    <string name="park_3_description">Prato della Valle is the largest square in the city of Padua, with a surface area of ​​88,620 m².
+The current configuration dates back to the end of the 18th century and is characterized by a central elliptical island, called Isola Memmia, surrounded by a canal on whose banks there is a double ring of statues, with an external circumference of about 572 meters.</string>
+
+    <!-- misc -->
+    <string name="back">back</string>
+</resources>
