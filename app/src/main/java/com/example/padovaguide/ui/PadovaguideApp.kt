@@ -27,6 +27,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.padovaguide.R
+import com.example.padovaguide.data.CategoryType
 import com.example.padovaguide.data.Recommendation
 import com.example.padovaguide.ui.utils.ContentType
 import com.example.padovaguide.ui.utils.NavigationType
@@ -110,7 +111,7 @@ fun PadovaguideApp(
         }
         WindowWidthSizeClass.Expanded -> {
             navigationType = NavigationType.PERMANENT_NAVIGATION_DRAWER
-            contentType = ContentType.LIST_AND_DETAIL
+            contentType = ContentType.LIST_ONLY
         }
         else -> {
             navigationType = NavigationType.BOTTOM_NAVIGATION
@@ -145,6 +146,11 @@ fun PadovaguideApp(
                             recommendation = recommendation
                         )
                         navController.navigate(AppScreen.Details.name)
+                    },
+                    onTabPressed = {category: CategoryType ->
+                        viewModel.updateCurrentCategory(
+                            category = category
+                        )
                     }
                 )
             }

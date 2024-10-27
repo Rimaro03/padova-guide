@@ -34,4 +34,12 @@ class PadovaguideViewModel: ViewModel() {
             )
         }
     }
+
+    fun updateCurrentCategory(category: CategoryType) {
+        _uiState.update {
+            it.copy(
+                currentCategory = category
+            )
+        }
+    }
 }

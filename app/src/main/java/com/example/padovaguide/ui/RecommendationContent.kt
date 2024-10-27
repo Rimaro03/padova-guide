@@ -41,7 +41,7 @@ import androidx.compose.ui.text.style.TextOverflow
 fun ListOnlyContent(
     padovaguideUiState: PadovaguideUiState,
     onRecommendationClick: (Recommendation) -> Unit,
-    modifier: Modifier
+    modifier: Modifier = Modifier
 ) {
     val recommendations = padovaguideUiState.currentCategoryRecommendations
 
@@ -62,9 +62,6 @@ fun ListOnlyContent(
         }
     }
 }
-
-@Composable
-fun ListAndDetailContent() {}
 
 @Composable
 fun RecommendationItem(
