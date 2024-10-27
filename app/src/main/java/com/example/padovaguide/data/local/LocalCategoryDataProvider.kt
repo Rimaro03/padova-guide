@@ -1,7 +1,7 @@
 package com.example.padovaguide.data.local
 
-import com.example.padovaguide.data.Category
 import com.example.padovaguide.R
+import com.example.padovaguide.data.Category
 
 object LocalCategoryDataProvider {
     val allCategories = listOf(
