@@ -27,7 +27,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.padovaguide.R
-import com.example.padovaguide.data.CategoryType
+import com.example.padovaguide.data.Category
 import com.example.padovaguide.data.Recommendation
 import com.example.padovaguide.ui.utils.ContentType
 import com.example.padovaguide.ui.utils.NavigationType
@@ -147,7 +147,7 @@ fun PadovaguideApp(
                         )
                         navController.navigate(AppScreen.Details.name)
                     },
-                    onTabPressed = {category: CategoryType ->
+                    onTabPressed = {category: Category ->
                         viewModel.updateCurrentCategory(
                             category = category
                         )

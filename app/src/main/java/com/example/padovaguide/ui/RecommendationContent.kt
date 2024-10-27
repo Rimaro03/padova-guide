@@ -53,8 +53,7 @@ fun ListOnlyContent(
         items(recommendations, key={recommendation -> recommendation.id}) { recommendation ->
             RecommendationItem(
                 recommendation = recommendation,
-                painter = painterResource(R.drawable.coffee_icon),
-                selected = false,
+                painter = painterResource(recommendation.category.icon),
                 onCardClick = {
                     onRecommendationClick(recommendation)
                 }
@@ -67,7 +66,6 @@ fun ListOnlyContent(
 fun RecommendationItem(
     recommendation: Recommendation,
     painter: Painter,
-    selected: Boolean,
     onCardClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -124,7 +122,6 @@ fun PreviewRecommendationItem(){
     RecommendationItem(
         recommendation = LocalRecommendationsDataProvider.defaultRecommendation,
         painter = painterResource(R.drawable.coffee_icon),
-        selected = false,
         onCardClick = {},
     )
 }

@@ -33,11 +33,12 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.padovaguide.data.CategoryType
 import com.example.padovaguide.ui.utils.ContentType
 import com.example.padovaguide.ui.utils.NavigationType
 import com.example.padovaguide.R
+import com.example.padovaguide.data.Category
 import com.example.padovaguide.data.Recommendation
+import com.example.padovaguide.data.local.LocalCategoryDataProvider
 
 @Composable
 fun RecommendationScreen(
@@ -45,30 +46,19 @@ fun RecommendationScreen(
     navigationType: NavigationType,
     contentType: ContentType,
     onRecommendationClick: (Recommendation) -> Unit,
-    onTabPressed: (CategoryType) -> Unit
+    onTabPressed: (Category) -> Unit
 ) {
-    val navigationItemContentList = listOf(
-        NavigationItemContent(
-            category = CategoryType.Coffee,
-            icon = painterResource(R.drawable.coffee_icon),
-            text = stringResource(id = R.string.coffee)
-        ),
-        NavigationItemContent(
-            category = CategoryType.Restaurants,
-            icon = painterResource(R.drawable.restaurant_icon),
-            text = stringResource(id = R.string.restaurants)
-        ),
-        NavigationItemContent(
-            category = CategoryType.Kidplaces,
-            icon = painterResource(R.drawable.kids_places_icon),
-            text = stringResource(id = R.string.kidplaces)
-        ),
-        NavigationItemContent(
-            category = CategoryType.Parks,
-            icon = painterResource(R.drawable.parks_icon),
-            text = stringResource(id = R.string.parks)
-        ),
-    )
+    // Generate item list for drawer, bottom bar, nav rail with mock data
+    var navigationItemContentList = emptyList<NavigationItemContent>()
+    for (i in (0L .. 3L)) {
+        val category = LocalCategoryDataProvider.getCategoryByID(i)
+        val item = NavigationItemContent(
+            category = category,
+            icon = painterResource(category.icon),
+            text = stringResource(category.name)
+        )
+        navigationItemContentList += item
+    }
 
     /* If the navigation type is a perm drawer, it is created here with the app content parsed in its body.
     Otherwise only the app content is rendered, which shows either a navigation rail or the bottom navigation,
@@ -122,7 +112,7 @@ private fun AppContent(
     navigationType: NavigationType,
     contentType: ContentType,
     padovaguideUiState: PadovaguideUiState,
-    onTabPressed: ((CategoryType) -> Unit),
+    onTabPressed: ((Category) -> Unit),
     onRecommendationPressed: (Recommendation) -> Unit,
     navigationItemContentList: List<NavigationItemContent>
 ){
@@ -165,8 +155,8 @@ private fun AppContent(
 @Composable
 private fun AppNavigationRail(
     modifier: Modifier = Modifier,
-    currentTab: CategoryType,
-    onTabPressed: ((CategoryType) -> Unit),
+    currentTab: Category,
+    onTabPressed: ((Category) -> Unit),
     navigationItemContentList: List<NavigationItemContent>
 ) {
     NavigationRail(modifier = modifier) {
@@ -188,8 +178,8 @@ private fun AppNavigationRail(
 @Composable
 private fun AppBottomNavigation(
     modifier: Modifier = Modifier,
-    currentTab: CategoryType,
-    onTabPressed: ((CategoryType) -> Unit),
+    currentTab: Category,
+    onTabPressed: ((Category) -> Unit),
     navigationItemContentList: List<NavigationItemContent>
 ){
     NavigationBar(modifier = modifier) {
@@ -211,8 +201,8 @@ private fun AppBottomNavigation(
 @Composable
 private fun NavigationDrawerContent(
     modifier: Modifier = Modifier,
-    selectedDestination: CategoryType,
-    onTabPressed: ((CategoryType) -> Unit),
+    selectedDestination: Category,
+    onTabPressed: ((Category) -> Unit),
     navigationItemContentList: List<NavigationItemContent>,
 ){
     Column {
@@ -242,7 +232,7 @@ private fun NavigationDrawerContent(
 }
 
 private data class NavigationItemContent(
-    val category: CategoryType,
+    val category: Category,
     val icon: Painter,
     val text: String
 )

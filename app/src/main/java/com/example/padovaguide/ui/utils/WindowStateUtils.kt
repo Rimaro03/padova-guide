@@ -5,5 +5,5 @@ enum class NavigationType {
 }
 
 enum class ContentType {
-    LIST_ONLY, LIST_AND_DETAIL
+    LIST_ONLY
 }

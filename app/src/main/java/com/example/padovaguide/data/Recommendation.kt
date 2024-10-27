@@ -5,7 +5,7 @@ import androidx.annotation.StringRes
 
 data class Recommendation(
     val id: Long,
-    val category: CategoryType,
+    val category: Category,
     @StringRes val name: Int,
     @DrawableRes val image: Int,
     @StringRes val location: Int,
